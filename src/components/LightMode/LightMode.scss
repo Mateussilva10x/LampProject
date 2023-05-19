@@ -19,6 +19,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        z-index: 9999;
 
         .search-icon {
           border-radius: 32px;
@@ -32,10 +33,11 @@
         }
         input {
           padding: 16px;
-          padding-left: 75px;
+          padding-left: 55px;
           border-radius: 32px;
           border: 1px solid #c8caca;
           color: #c8caca;
+          outline: none;
         }
       }
     }
@@ -47,12 +49,90 @@
     align-items: center;
     flex-direction: column;
     z-index: 999;
-    margin-top: -133px;
+    margin-top: -80px;
+    margin-bottom: 40px;
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      img {
+        width: 20%;
+        position: absolute;
+        left: 50;
+        top: 0;
+      }
+
+      img.flash {
+        position: relative;
+        top: -36rem;
+        width: 58%;
+      }
+
+      button {
+        position: relative;
+        top: -60rem;
+      }
+
+      .main-content {
+        position: relative;
+        top: -50rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 16px;
+        width: 50%;
+
+        h1 {
+          font-size: 96px;
+          color: #fff;
+        }
+
+        span {
+          color: #c2c4c4;
+          width: 70%;
+          font-size: 16px;
+          word-wrap: break-word;
+        }
+      }
+    }
+
+    .elipse-container {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 70%;
+        position: relative;
+      }
+    }
 
     .footer {
-      position: absolute;
-      bottom: 8%;
-      right: 5%;
+      position: relative;
+      bottom: 45rem;
+      left: 33rem;
+      padding-right: 24px;
+      .social-medias {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: flex-end;
+
+        .media-icon {
+          background-color: #fff;
+          padding: 8px;
+          border-radius: 22px;
+          margin-top: 8px;
+
+          svg {
+            color: #4c4c4c;
+          }
+        }
+      }
     }
   }
 }
