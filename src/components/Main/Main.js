@@ -18,7 +18,7 @@ import {
 import "./LightMode.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
-const LightMode = () => {
+const Main = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChecked = () => {
@@ -115,4 +115,4 @@ const LightMode = () => {
   );
 };
 
-export default LightMode;
+export default Main;

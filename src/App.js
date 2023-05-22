@@ -1,7 +1,7 @@
-import LightMode from "./components/LightMode/LightMode";
+import Main from "./components/Main/Main";
 
 function App() {
-  return <LightMode />;
+  return <Main />;
 }
 
 export default App;
