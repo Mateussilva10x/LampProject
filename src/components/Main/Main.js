@@ -1,22 +1,14 @@
 import React, { useState } from "react";
 import LampOn from "../../assets/lampOn.png";
-import LightLogo from "../../assets/lightLogo.png";
-import DarkLogo from "../../assets/darkLogo.png";
 import LightElipse from "../../assets/lightElipse.png";
 import DarkElipse from "../../assets/darkElipse.png";
 import Flash from "../../assets/flash.png";
-import {
-  Search,
-  UserCircle,
-  ChevronDown,
-  ShoppingCart,
-  Youtube,
-  Twitter,
-  Mouse,
-} from "lucide-react";
 
-import "./LightMode.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
+import "./Main.scss";
 
 const Main = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -27,30 +19,7 @@ const Main = () => {
 
   return (
     <div className={!isChecked ? "light content" : "dark content"}>
-      <header>
-        <img
-          src={!isChecked ? LightLogo : DarkLogo}
-          alt="logo para o modo claro"
-          className="logo"
-        />
-        <div className={!isChecked ? "menu" : "dark-mode menu"}>
-          <div className="search">
-            <div
-              className={!isChecked ? "search-icon" : "search-icon dark-mode"}
-            >
-              <Search size={20} />
-            </div>
-            <input
-              className={!isChecked ? "" : "dark-mode"}
-              type="text"
-              placeholder="search lamp..."
-            />
-          </div>
-          <ShoppingCart />
-          <UserCircle />
-          <ChevronDown />
-        </div>
-      </header>
+      <Header isChecked={isChecked} />
       <section>
         <div className="image-container">
           <div className="elipse-container">
@@ -72,43 +41,7 @@ const Main = () => {
                 : "All our lamps are carefully selected to ensure exceptional quality, durability, and design."}
             </span>
           </div>
-          <div className="footer">
-            <div className={!isChecked ? "list-menu" : "dark-mode list-menu"}>
-              <ul>
-                <li>home</li>
-                <li>products</li>
-                <li>projects</li>
-                <li>sale</li>
-                <li>help</li>
-              </ul>
-            </div>
-
-            <div
-              className={
-                !isChecked
-                  ? "footer-icon-center"
-                  : "footer-icon-center dark-mode"
-              }
-            >
-              <Mouse />
-              <ChevronDown />
-            </div>
-            <div className="social-medias">
-              <p>follow us to get the news</p>
-              <div className="social-medias-icons">
-                <div
-                  className={!isChecked ? "media-icon" : "dark-mode media-icon"}
-                >
-                  <Youtube />
-                </div>
-                <div
-                  className={!isChecked ? "media-icon" : "dark-mode media-icon"}
-                >
-                  <Twitter />
-                </div>
-              </div>
-            </div>
-          </div>
+          <Footer isChecked={isChecked} />
         </div>
       </section>
     </div>
